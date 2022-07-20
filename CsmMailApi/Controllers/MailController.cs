@@ -18,10 +18,10 @@ namespace CsmMailApi.Controllers
         }
 
         [HttpPost]
-        public async Task<string> Send([FromBody] MailDto dto)
+        public async Task<IActionResult> Send([FromBody] MailDto dto)
         {
             var result = await _service.SendAsync(dto);
-            return result;
+            return Ok(result);
         }
     }
 }

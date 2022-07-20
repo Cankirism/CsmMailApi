@@ -48,6 +48,7 @@ namespace CsmMail.Services
                     mail.Body = dto.Body;
                     mail.IsBodyHtml = true;
                     await client.SendMailAsync(mail);
+                   
 
                     return "success";
                 }
